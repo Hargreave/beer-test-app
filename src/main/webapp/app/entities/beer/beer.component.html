@@ -1,0 +1,73 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="beerTestApp.beer.home.title">Beers</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-beer" [routerLink]="['/beer/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="beerTestApp.beer.home.createLabel">
+            Create a new Beer
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="beers?.length === 0">
+        <span jhiTranslate="beerTestApp.beer.home.notFound">No beers found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="beers && beers.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="beerTestApp.beer.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="beerTestApp.beer.alcoholPercentage">Alcohol Percentage</span></th>
+                    <th scope="col" ><span jhiTranslate="beerTestApp.beer.description">Description</span></th>
+                    <th scope="col" ><span jhiTranslate="beerTestApp.beer.addedDate">Added Date</span></th>
+                    <th scope="col" ><span jhiTranslate="beerTestApp.beer.adressOfOrigin">Adress Of Origin</span></th>
+                    <th scope="col" ><span jhiTranslate="beerTestApp.beer.style">Style</span></th>
+                    <th scope="col" ><span jhiTranslate="beerTestApp.beer.comment">Comment</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let beer of beers ;trackBy: trackId">
+                    <td><a [routerLink]="['/beer', beer.id, 'view']">{{ beer.id }}</a></td>
+                    <td>{{ beer.name }}</td>
+                    <td>{{ beer.alcoholPercentage }}</td>
+                    <td>{{ beer.description }}</td>
+                    <td>{{ beer.addedDate | date:'mediumDate' }}</td>
+                    <td>{{ beer.adressOfOrigin }}</td>
+                    <td>{{ beer.style }}</td>
+                    <td>{{ beer.comment }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/beer', beer.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/beer', beer.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(beer)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

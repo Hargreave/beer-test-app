@@ -1,0 +1,59 @@
+{
+  "name": "Beer",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "javadoc": "Beer name, max symbols 100",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "1",
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "alcoholPercentage",
+      "fieldType": "Double",
+      "javadoc": "Beer alcohol percentage",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMin": "0",
+      "fieldValidateRulesMax": "100"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "javadoc": "Beer description",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "1",
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "addedDate",
+      "fieldType": "LocalDate",
+      "javadoc": "Date when beer was added to database",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "adressOfOrigin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "style",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210201183022",
+  "entityTableName": "beer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["beerTestApp"]
+}

@@ -1,0 +1,34 @@
+{
+  "beerTestApp": {
+    "beer": {
+      "home": {
+        "title": "Beers",
+        "createLabel": "Créer un nouveau Beer",
+        "createOrEditLabel": "Créer ou éditer un Beer",
+        "notFound": "Aucun Beer trouvé"
+      },
+      "created": "Un nouveau Beer a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Beer avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Beer avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Beer {{ id }} ?"
+      },
+      "detail": {
+        "title": "Beer"
+      },
+      "name": "Name",
+      "alcoholPercentage": "Alcohol Percentage",
+      "description": "Description",
+      "addedDate": "Added Date",
+      "adressOfOrigin": "Adress Of Origin",
+      "style": "Style",
+      "comment": "Comment",
+      "help": {
+        "name": "Beer name, max symbols 100",
+        "alcoholPercentage": "Beer alcohol percentage",
+        "description": "Beer description",
+        "addedDate": "Date when beer was added to database"
+      }
+    }
+  }
+}
