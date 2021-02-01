@@ -1,0 +1,22 @@
+
+application {
+  config {
+    baseName beerTestApp,
+    applicationType monolith,
+    packageName ee.seesoon.beerapp,
+    authenticationType jwt,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Beer {
+	name String required minlength(1) maxlength(100) /** Beer name, max symbols 100*/,
+    alcoholPercentage Double required min(0) max(100) /** Beer alcohol percentage */,
+    description String required minlength(1) maxlength(2000) /** Beer description */,
+    addedDate LocalDate required /** Date when beer was added to database */,
+    adressOfOrigin String , // TODO 1 to 1 relationship
+    style String , // TODO 1 to 1 relationship
+    comment String
+}
+    
