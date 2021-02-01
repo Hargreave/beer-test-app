@@ -13,22 +13,15 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-eureka:
-  client:
-    enabled: false
-  instance:
-    appname: BeerTestApp
-    instanceId: BeerTestApp:${spring.application.instance-id:${random.value}}
-
 spring:
   profiles:
     # Uncomment the following line to enable tests against production database type rather than H2, using Testcontainers
     #active: testcontainers
   application:
-    name: BeerTestApp
+    name: beerTestApp
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:BeerTestApp;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:beerTestApp;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:

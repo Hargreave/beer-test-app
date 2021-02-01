@@ -1,4 +1,4 @@
-# BeerTestApp
+# beerTestApp
 
 This application was generated using JHipster 6.10.5, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.10.5](https://www.jhipster.tech/documentation-archive/v6.10.5).
 
@@ -106,7 +106,7 @@ update src/main/webapp/app/app.module.ts
 
 ### Packaging as jar
 
-To build the final jar and optimize the BeerTestApp application for production, run:
+To build the final jar and optimize the beerTestApp application for production, run:
 
 ```
 
@@ -186,16 +186,16 @@ For more information, refer to the [Code quality page][].
 
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
 
-For example, to start a postgresql database in a docker container, run:
+For example, to start a mysql database in a docker container, run:
 
 ```
-docker-compose -f src/main/docker/postgresql.yml up -d
+docker-compose -f src/main/docker/mysql.yml up -d
 ```
 
 To stop it and remove the container, run:
 
 ```
-docker-compose -f src/main/docker/postgresql.yml down
+docker-compose -f src/main/docker/mysql.yml down
 ```
 
 You can also fully dockerize your application and all the services that it depends on.
@@ -220,7 +220,6 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [jhipster homepage and latest documentation]: https://www.jhipster.tech
 [jhipster 6.10.5 archive]: https://www.jhipster.tech/documentation-archive/v6.10.5
 [using jhipster in development]: https://www.jhipster.tech/documentation-archive/v6.10.5/development/
-[service discovery and configuration with the jhipster-registry]: https://www.jhipster.tech/documentation-archive/v6.10.5/microservices-architecture/#jhipster-registry
 [using docker and docker-compose]: https://www.jhipster.tech/documentation-archive/v6.10.5/docker-compose
 [using jhipster in production]: https://www.jhipster.tech/documentation-archive/v6.10.5/production/
 [running tests page]: https://www.jhipster.tech/documentation-archive/v6.10.5/running-tests/

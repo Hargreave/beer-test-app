@@ -29,7 +29,7 @@ public class BeerTestApp {
     }
 
     /**
-     * Initializes BeerTestApp.
+     * Initializes beerTestApp.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>

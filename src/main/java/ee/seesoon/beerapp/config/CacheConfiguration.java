@@ -13,9 +13,6 @@ import org.springframework.boot.info.BuildProperties;
 import org.springframework.boot.info.GitProperties;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.context.annotation.*;
 
 @Configuration
@@ -50,6 +47,7 @@ public class CacheConfiguration {
             createCache(cm, ee.seesoon.beerapp.domain.User.class.getName());
             createCache(cm, ee.seesoon.beerapp.domain.Authority.class.getName());
             createCache(cm, ee.seesoon.beerapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, ee.seesoon.beerapp.domain.Beer.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
